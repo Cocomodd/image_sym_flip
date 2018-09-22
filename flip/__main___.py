@@ -8,7 +8,7 @@ from os.path import join, abspath, splitext
 def main():
 
     dir_path = './pics_originals/'
-    save_path = '/home/cocomo/Python/flippilf/pics_flipped/'
+    save_path = './pics_flipped/'
     for f in listdir(dir_path):
 
         abs_path = abspath((join(dir_path, f)))

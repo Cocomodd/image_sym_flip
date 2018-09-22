@@ -1,4 +1,5 @@
 import cherrypy
+from cattac.http.config.config import config
 from cattac.libraries.Zip import Zip
 
 
@@ -11,4 +12,5 @@ class Cattac(object):
         return Zip(image, name).get_zip()
 
 
+cherrypy.config.update(config())
 cherrypy.quickstart(Cattac())

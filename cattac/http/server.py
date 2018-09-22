@@ -1,5 +1,5 @@
 import cherrypy
-from cattac.lib.Zip import Zip
+from cattac.libraries.Zip import Zip
 
 
 class Cattac(object):

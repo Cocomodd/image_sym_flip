@@ -1,6 +1,6 @@
 from PIL import Image
-from flip.text_functions import sym_left, sym_right
-from flip.pic_functions import sym_right_img, sym_left_img, resize
+from .text_functions import sym_left, sym_right
+from .pic_functions import sym_right_img, sym_left_img, resize
 from os import listdir
 from os.path import join, abspath, splitext
 
@@ -13,7 +13,6 @@ def main():
 
         abs_path = abspath((join(dir_path, f)))
         fn, fext = splitext(f)
-        print(abs_path)
 
         i = Image.open(abs_path)
         i = resize(i)
@@ -25,6 +24,7 @@ def main():
 
         sym_r = sym_right_img(i)
         sym_r.save(save_path+"{}_{}{}".format(fn, sym_right(fn), fext))
+        print(abs_path+" flipped")
 
 
 if __name__ == "__main__":

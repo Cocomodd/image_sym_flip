@@ -1,4 +1,4 @@
-from cattac_http import server
+from cattac.http import server
 
 
 def main():

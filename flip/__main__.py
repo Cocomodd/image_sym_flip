@@ -1,4 +1,5 @@
 from PIL import Image
+
 from .text_functions import sym_left, sym_right
 from .pic_functions import sym_right_img, sym_left_img, resize
 from os import listdir
@@ -13,7 +14,6 @@ def main():
 
         abs_path = abspath((join(dir_path, f)))
         fn, fext = splitext(f)
-
         i = Image.open(abs_path)
         i = resize(i)
 
